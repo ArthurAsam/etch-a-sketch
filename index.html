@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="etch.css"  href="let cells = document.querySelectorAll('.cell')">
+    <title>Etch-A-Sketch</title>
+</head>
+<body>
+    <div id="outer-of-outer">
+        <div id="outermost-wrapper">
+            <div id="outer-wrap-buttons">
+                <div id="btn-container">
+                    
+                    <input type="color" value="#EFEFEF" id="color-picker" class="targetButtons">
+                    
+                    <button class="targetButtons" id="color" onclick="colorMode()">Color mode</button>
+                    <button class="targetButtons" id="rainbow" onclick="rainbowMode()">Rainbow mode</button>
+                    <button class="targetButtons" id="erase" onclick="eraseMode()">Eraser</button>
+                    <button class="targetButtons" id="clear" onclick="clearMode()">Clear</button>
+                    
+                    <div class="slideContainer">
+                    <input type="range" min="1" max="100" value="0" class="slider" id="customRange">
+                    </div>
+                
+                </div>
+
+            </div>
+
+            <div id="grid-container"></div>
+
+        </div>
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>
