@@ -1,7 +1,7 @@
 //grid-selectors
 let gridContainer = document.getElementById('grid-container')
 let rangeSlider = document.getElementById('custom-range'); 
-let rangeValueDisplay = document.getElementById('rangeValue')
+let rangeValueDisplay = document.getElementById('rangevalue')
 let slideContainer = document.querySelector('slider-container'); 
 let cells;
 
@@ -12,7 +12,6 @@ let erase = document.getElementById('erase');
 let clear = document.getElementById('clear'); 
 
 //color-picker selectors
-let displayCircle = document.getElementById('colorDisplay'); 
 let color_picker = document.getElementById('color-picker'); 
 
 
@@ -48,7 +47,7 @@ function random(number){
 color_picker.oninput = (function(){
 
     color.style.backgroundColor = color_picker.value; 
-
+    color_picker.style.backgroundColor = color_picker.value; 
 
     for (const cell of cells){
         

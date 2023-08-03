@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="etch.css"  href="let cells = document.querySelectorAll('.cell')">
+    <link rel="stylesheet" href="etch.css">
     <title>Etch-A-Sketch</title>
 </head>
 <body>
@@ -15,16 +15,16 @@
             <div id="outer-wrap-buttons">
                 <div id="btn-container">
                     
-                    <input type="color" value="#708090" id="color-picker" class="targetButtons">
+                    <input type="color" id="color-picker" class="targetbuttons">
                     
-                    <button class="targetButtons" id="color" onclick="colorMode()">Color mode</button>
-                    <button class="targetButtons" id="rainbow" onclick="rainbowMode()">Rainbow mode</button>
-                    <button class="targetButtons" id="erase" onclick="eraseMode()">Eraser</button>
-                    <button class="targetButtons" id="clear" onclick="clearMode()">Clear</button>
+                    <button class="targetbuttons" id="color" onclick="colorMode()">Color mode</button>
+                    <button class="targetbuttons" id="rainbow" onclick="rainbowMode()">Rainbow mode</button>
+                    <button class="targetbuttons" id="erase" onclick="eraseMode()">Eraser</button>
+                    <button class="targetbuttons" id="clear" onclick="clearMode()">Clear</button>
 
 
                     <div class="slider-container">
-                        <p id="rangeValue"></p>
+                        <p id="rangevalue"></p>
                         <input type="range" min="16" max="30" value="16" class="slider" id="custom-range">
                     </div>
                     
