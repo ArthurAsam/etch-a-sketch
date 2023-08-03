@@ -1,30 +1,44 @@
+//grid-selectors
 let gridContainer = document.getElementById('grid-container')
-let rangeSlider = getElementById('customRange'); 
+let rangeSlider = document.getElementById('custom-range'); 
+let rangeValueDisplay = document.getElementById('rangeValue')
+let slideContainer = document.querySelector('slider-container'); 
+let cells;
 
-
+//button-selectors
 let color = document.getElementById('color'); 
 let rainbow = document.getElementById('rainbow'); 
 let erase = document.getElementById('erase'); 
 let clear = document.getElementById('clear'); 
-let displayCircle = document.getElementById('colorDisplay'); 
 
+//color-picker selectors
+let displayCircle = document.getElementById('colorDisplay'); 
 let color_picker = document.getElementById('color-picker'); 
 
 
+function makeGrid(rows, cols){
+    gridContainer.innerHTML = ''; 
+    
+    rangeValueDisplay.textContent = (`Your grid size is: ${rows} x ${cols}`); 
+    
+    gridContainer.style.setProperty("--grid-cols", cols); 
+    gridContainer.style.setProperty("--grid-rows", rows); 
+    for(let i = 0; i < rows * cols; i++){
+        let gridItem = document.createElement('div'); 
+        gridItem.classList.add('grid-item'); 
+        gridContainer.appendChild(gridItem); 
+        cells = document.querySelectorAll('.grid-item')
+        console.log(cells)
+    }
+}
 
 
 
-for (let i = 0; i < ; i++){
-    let div = document.createElement('div'); 
-    div.classList.add('cell'); 
-    container.appendChild(div); 
+function getSliderValue(){
+    makeGrid(rangeSlider.value, rangeSlider.value); 
+}
 
-}; 
-
-
-
-let cells = document.querySelectorAll('.cell')
-
+rangeSlider.addEventListener("input", getSliderValue);  
 
 
 function random(number){
@@ -32,13 +46,14 @@ function random(number){
 }
 
 color_picker.oninput = (function(){
+
     color.style.backgroundColor = color_picker.value; 
 
 
     for (const cell of cells){
         
         cell.addEventListener('mouseenter', () => {
-    
+
         
         cell.style.backgroundColor = color_picker.value; 
 
@@ -85,7 +100,7 @@ function eraseMode(){
 
         cell.addEventListener('mouseenter', () =>{
 
-            cell.style.background = 'lightblue'; 
+            cell.style.background = ''; 
 
 
         })
@@ -97,7 +112,7 @@ function eraseMode(){
 function clearMode(){
     for (const cell of cells){
     
-            cell.style.backgroundColor = 'lightblue'; 
+            cell.style.backgroundColor = ''; 
 
          
     }

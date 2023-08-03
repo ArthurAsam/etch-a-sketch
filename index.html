@@ -7,21 +7,28 @@
     <title>Etch-A-Sketch</title>
 </head>
 <body>
+    <header>
+        <h1>Etch-A-Sketch</h1>
+    </header>
     <div id="outer-of-outer">
         <div id="outermost-wrapper">
             <div id="outer-wrap-buttons">
                 <div id="btn-container">
                     
-                    <input type="color" value="#EFEFEF" id="color-picker" class="targetButtons">
+                    <input type="color" value="#708090" id="color-picker" class="targetButtons">
                     
                     <button class="targetButtons" id="color" onclick="colorMode()">Color mode</button>
                     <button class="targetButtons" id="rainbow" onclick="rainbowMode()">Rainbow mode</button>
                     <button class="targetButtons" id="erase" onclick="eraseMode()">Eraser</button>
                     <button class="targetButtons" id="clear" onclick="clearMode()">Clear</button>
-                    
-                    <div class="slideContainer">
-                    <input type="range" min="1" max="100" value="0" class="slider" id="customRange">
+
+
+                    <div class="slider-container">
+                        <p id="rangeValue"></p>
+                        <input type="range" min="16" max="30" value="16" class="slider" id="custom-range">
                     </div>
+                    
+                    
                 
                 </div>
 

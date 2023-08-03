@@ -1,15 +1,37 @@
 body{
     height: 100vh;
+    background-color: antiquewhite;
 }
+
+:root {
+    --grid-rows: 1; 
+    --grid-cols: 1; 
+}
+
+header{
+    display: flex; 
+    justify-content: center;
+    position: relative; 
+}
+
+h1{
+    position: fixed; 
+    left: 1150px; 
+    margin-left: 100px; 
+    font-size: 3rem; 
+    color: blue; 
+}
+
 
 #outer-of-outer{
-    
     display: flex; 
     justify-content: center; 
+    margin: 0px; 
+    position: fixed; 
+    left: 660px; 
 }
 
-#outermost-wrapper{
-    
+#outermost-wrapper{  
     display: flex; 
     justify-content: center;
     margin: 100px;  
@@ -29,12 +51,12 @@ body{
     height: 90px; 
     border-radius: 40px; 
     border: none; 
-    box-shadow: 0px 3px 10px lightslategray; 
+    box-shadow: 0px 3px 10px lightgrey; 
+    background-color: #708090;
     cursor: pointer; 
 }
 
-#btn-container{
-    
+#btn-container{  
     display: flex;
     margin: 50px 0px;
     flex-direction: column; 
@@ -43,8 +65,7 @@ body{
 }
 
 
-.targetButtons {
-    
+.targetButtons {  
     padding: 20px; 
     font-size: 20px; 
     border: none; 
@@ -54,43 +75,49 @@ body{
 }
 
 .targetButtons:hover {
-
-    background-color: limegreen; 
+    transform: scale(1.2, 1.2)
 
 }
 
 .targetButtons:active {
-    background-color: #3e8e41;
+    background-color: #EFEFEF;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
 
 
-grid-container {
-    
+#grid-container {
+    width: 700px; 
+    height: 700px; 
     display: grid; 
-    border: 1px solid black; 
-
+    border: 10px solid black; 
+    border-radius: 5px; ;
+    grid-template-columns: repeat(var(--grid-cols), 1fr); 
+    grid-template-rows: repeat(var(--grid-rows), 1fr); 
+    
     
 }
 
 
 .grid-item {
-    
-
-    border: 1px solid black; 
+    border: .5px solid lightgrey; 
     
 }
 
 input[type="color"]::-webkit-color-swatch{
     display: none; 
-    
 }
 
-.slideContainer{
-    width: 100%; 
+#rangeValue{
+    font-size: 1.2rem; 
 
 }
+
+input[type="range"]{
+    margin-top: 0px; 
+    transform: scale(1.2, 1.2)
+}
+
 
 .slider{
     width: 100%; 
