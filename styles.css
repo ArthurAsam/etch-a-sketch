@@ -106,3 +106,8 @@ h1 {
     border: 3px solid aliceblue; 
     color: steelblue; 
 }
+
+:root {
+    --color-grey: #dcdcdc; 
+}
+
